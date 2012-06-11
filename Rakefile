@@ -1,27 +1,7 @@
-require 'rubygems'
-require 'bundler'
-begin
-  Bundler.setup(:default, :development)
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
-  exit e.status_code
-end
+#!/usr/bin/env rake
+require "bundler/gem_tasks"
+
 require 'rake'
-
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "turing-contacts"
-  gem.homepage = "https://github.com/turingstudio/contacts"
-  gem.license = "MIT"
-  gem.summary = "Import users' contacts lists from Google, Yahoo!, and Windows Live."
-  gem.description = "Import users' contacts lists from Google, Yahoo!, and Windows Live."
-  gem.email = "julian@turingstudio.com"
-  gem.authors = ["Mislav Marohnic", "George Ogata", "Julian Coutu"]
-end
-
-Jeweler::RubygemsDotOrgTasks.new
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
